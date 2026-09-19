@@ -1,0 +1,526 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe6ef,
+            #fff5f8,
+            #ffdce8
+        );
+
+    color: #4a2633;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 650px;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(150, 40, 80, 0.20);
+
+    animation:
+        appear 0.8s ease;
+
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+
+    color: #c2185b;
+
+    font-size: 2.4rem;
+
+    margin-bottom: 20px;
+
+}
+
+h2 {
+
+    color: #c2185b;
+
+    margin: 20px 0;
+
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.icon {
+
+    font-size: 65px;
+
+    animation:
+        heartbeat 1.5s infinite;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    margin-top: 20px;
+
+    padding:
+        15px 28px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c2185b,
+            #ed4f83
+        );
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px
+        rgba(194, 24, 91, 0.25);
+
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loader {
+
+    width: 55px;
+
+    height: 55px;
+
+    border:
+        6px solid #ffd1df;
+
+    border-top:
+        6px solid #c2185b;
+
+    border-radius: 50%;
+
+    margin:
+        30px auto;
+
+    animation:
+        spin 1s linear infinite;
+
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.celebration {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+.name {
+
+    color: #c2185b;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+}
+
+.nurse {
+
+    font-size: 55px;
+
+    margin: 25px 0;
+
+}
+
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter {
+
+    background: #fff7fa;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    margin-top: 25px;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+.letter p {
+
+    margin-bottom: 18px;
+
+}
+
+.special {
+
+    color: #c2185b;
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+.signature {
+
+    color: #c2185b;
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-intro {
+
+    margin-bottom: 25px;
+
+}
+
+.photo-container {
+
+    width: 330px;
+
+    max-width: 90%;
+
+    margin: 30px auto;
+
+}
+
+.lynne-photo {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 20px;
+
+    filter:
+        drop-shadow(
+            0 12px 20px
+            rgba(0, 0, 0, 0.20)
+        );
+
+    animation:
+        photoAppear 1.2s ease;
+
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final-message {
+
+    background: #fff7fa;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    margin-top: 25px;
+
+}
+
+.big-text {
+
+    color: #c2185b;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+
+    position: fixed;
+
+    width: 10px;
+
+    height: 15px;
+
+    top: -20px;
+
+    z-index: 9999;
+
+    animation:
+        fall 4s linear forwards;
+
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.12);
+
+    }
+
+}
+
+
+@keyframes spin {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes photoAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes fall {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        padding:
+            35px 20px;
+
+    }
+
+    h1 {
+
+        font-size: 1.9rem;
+
+    }
+
+    h2 {
+
+        font-size: 1.4rem;
+
+    }
+
+    .lynne-photo {
+
+        max-height: 500px;
+
+        object-fit: contain;
+
+    }
+
+}
